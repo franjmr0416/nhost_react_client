@@ -2,7 +2,7 @@ import { Fingerprint } from '@mui/icons-material'
 import { TextField, Stack, Button } from '@mui/material'
 import { useSignInEmailPassword } from '@nhost/react'
 import React, { useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
 
 const SignInForm = () => {
   const [email, setEmail] = useState('')
@@ -62,6 +62,10 @@ const SignInForm = () => {
           >
             Sign In
           </Button>
+
+          <p>
+            Don't have an account? <Link to='/signup'>Sign up</Link>
+          </p>
 
           {isError ? <p>{error?.message}</p> : null}
         </Stack>

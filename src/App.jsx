@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 const subdomain = import.meta.env.VITE_REACT_APP_NHOST_SUBDOMAIN
 const region = import.meta.env.VITE_REACT_APP_NHOST_REGION
@@ -25,6 +26,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path='/signup' element={<Register />} />
       </Routes>
     </NhostProvider>
   )
